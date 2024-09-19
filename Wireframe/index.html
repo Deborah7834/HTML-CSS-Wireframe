@@ -13,10 +13,85 @@
             padding: 0;
             box-sizing: border-box;
         }
-        header, main, footer {
+        main, footer {
             padding: 20px;
             text-align: center;
         }
+
+
+        header{
+          background-color: #000000;
+          color: #fff;
+          padding: 5px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+
+        header h1{
+          margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: #000000;
+            padding: 5px ;
+            color: #fff;
+            text-align: center;
+            font-size: 0.9em;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .article button{
+          background-color: #000000;
+          color: #fff;
+          font-size: 16px;
+          padding: 8px 15px;
+          border-radius: 3px;
+          margin-left: 0px;
+          display: block;
+        }
+
+                
+                main {
+            display: grid;
+            grid-template-columns: 1fr; 
+            grid-gap: 20px;
+            padding: 20px;
+            margin-bottom: 80px;
+            text-align: left;
+        }
+
+        
+        main > section:first-child {
+            grid-column: 1 / span 2; 
+        }
+
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 1fr; 
+            }
+
+            main > section:nth-child(2),
+            main > section:nth-child(3) {
+                grid-column: span 1; 
+            }
+        }
+
+        .article {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+        }
+
+
     </style>
   </head>
   <body>
@@ -31,22 +106,22 @@
     
       <!-- Main Content Area -->
     <main>
-      <section class="featured-article">
-          <img src="git-explained.jpg" alt="What is Git?">
+      <section class="article">
+          <img src="./old-black2.jpg" alt="What is Git?">
           <h2>What is Git?</h2>
           <p class="featured-article-summary">Git is a distributed version control system that helps developers manage changes in their code. It allows teams to collaborate on projects by tracking the history of modifications, enabling them to revert to previous states if needed.</p>
           <button>Read More</button>
       </section>
 
       <section class="article">
-          <img src="git-need.jpg" alt="Why Developers Need Git">
+          <img src="./old-black.jpg" alt="Why Developers Need Git">
           <h2>Why Do Developers Need Git?</h2>
           <p class="article-summary">Git helps developers by providing a robust system for managing different versions of code. It supports collaboration, allowing multiple team members to work on the same project without overriding each other’s changes. Git also makes it easy to identify issues, perform rollbacks, and manage feature development.</p>
           <button>Read More</button>
       </section>
 
       <section class="article">
-          <img src="git-branch.jpg" alt="What is a Branch in Git?">
+          <img src="./old-black.jpg" alt="What is a Branch in Git?">
           <h2>What is a Branch in Git?</h2>
           <p class="article-summary">A branch in Git is a pointer to a specific commit in the project’s history. Developers use branches to work on features, bug fixes, or experiments separately from the main codebase. Once changes are ready, they can be merged back into the main branch, keeping the history intact.</p>
           <button>Read More</button>
