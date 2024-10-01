@@ -1,4 +1,4 @@
-/* /* Base styling */
+* /* Base styling */
 * {
   margin: 0;
   padding: 0;
@@ -86,22 +86,9 @@ header {
   height: 100%;
   object-fit: cover;
 }
-/* Medium screens and above */
-@media (min-width: 500px) {
-  .cake-grid-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-/* Large screens and above */
-@media (min-width: 900px) {
-  .cake-grid-section {
-    gap: 20px;
-  }
-
-  .cake-box {
-    border-radius: 15px;
-  }
+.cake-box {
+  border-radius: 15px;
 }
 
 input[type="text"],
@@ -145,4 +132,14 @@ background-color:white .container {
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+}
+
+@media (min-width: 500px){
+ .cake-grid-section {
+  grid-template-columns: repeat(2, 1fr);
+}
+/* Large screens and above */
+@media (min-width: 900px) {
+ .cake-grid-section {
+  gap: 20px;
 }
